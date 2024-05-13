@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f18a0858f43e488aba817fc337b32fed" Name="Diagram1">
+        <EntityTypeShape EntityType="roman_belkinModel.expenses" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="roman_belkinModel.Game" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="roman_belkinModel.human" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="roman_belkinModel.Sponsor" Width="1.5" PointX="2.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="roman_belkinModel.sportsman" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="roman_belkinModel.Statistic" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="roman_belkinModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="roman_belkinModel.User" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="roman_belkinModel.UserType" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="roman_belkinModel.FK_sportsman_human" ManuallyRouted="false" />
+        <AssociationConnector Association="roman_belkinModel.FK_User_human" ManuallyRouted="false" />
+        <AssociationConnector Association="roman_belkinModel.FK_User_UserType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

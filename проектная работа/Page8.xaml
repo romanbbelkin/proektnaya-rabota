@@ -1,0 +1,152 @@
+﻿<Page x:Class="проектная_работа.Page8"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:проектная_работа"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page8">
+
+    <Grid Background="White">
+        
+
+        
+
+        <TabControl Margin="0,0,0,-23" Grid.RowSpan="3">
+            <TabItem Header="Личный кабинет" FontSize="17" Background="Purple" Foreground="White">
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid Background="Plum">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <Label Content=""/>
+                            <Label Content=""/>
+
+                            <Image x:Name="Avatarka" Source="Image/аватарка.png" Width="200" Height="200" Grid.Column="0"/>
+                            <Label Content=""/>
+                            <Button Height="24" Width="200" Content="Изменить аватарку"  FontSize="17" Background="Purple" Grid.Column="0" Foreground="White" Click="Button_Click_Avatarka" Panel.ZIndex="2">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="15"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <Label Content="Фамилия"/>
+                            <TextBox x:Name="TxbSurname" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Имя"/>
+                            <TextBox x:Name="TxbName" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Отчетсво"/>
+                            <TextBox x:Name="TxbLastname" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Роль"/>
+                            <TextBox x:Name="TxbRole" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Логин"/>
+                            <TextBox x:Name="TxbLogin" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Пароль"/>
+                            <TextBox x:Name="TxbPassword" Width="490" HorizontalAlignment="Left" />
+                            <Label Content="Возраст"/>
+                            <TextBox x:Name="TxbAge" Width="490" HorizontalAlignment="Left" />
+                            <Label Content=""/>
+                            <Button Height="24" Width="200" Content="Сохранить изменения"  FontSize="17" Background="Purple" Grid.Column="0" Foreground="White" Click="Button_Click_Save" Panel.ZIndex="2">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="15"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+
+                        </StackPanel>
+
+
+
+
+
+
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Команда" FontSize="17" Background="Purple" Foreground="White">
+                <Grid Background="Plum">
+                    <DataGrid Grid.Row="1" AutoGenerateColumns="False"
+x:Name="Team">
+                        <DataGrid.Columns>
+
+                            <DataGridTextColumn Header="Фамилия" Width="*" Binding="{Binding human1.surname}"/>
+                            <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding human1.name}"/>
+                            <DataGridTextColumn Header="Отчество" Width="*" Binding="{Binding human1.lastname}"/>
+                            <DataGridTextColumn Header="Гражданство" Width="*" Binding="{Binding citizenship}"/>
+                            <DataGridTextColumn Header="Рост" Width="*" Binding="{Binding height}"/>
+                            <DataGridTextColumn Header="Вес" Width="*" Binding="{Binding weight}"/>
+                            <DataGridTextColumn Header="Нога" Width="*" Binding="{Binding foot}"/>
+                            <DataGridTextColumn Header="Возраст" Width="*" Binding="{Binding human1.age}"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+
+
+
+
+            <TabItem Header="Добавить спортсмена" FontSize="17" Background="Purple" Foreground="White">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid Background="Plum">
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Margin="50,50,50,50" Grid.ColumnSpan="3" VerticalAlignment="Center">
+                            
+
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-43,0,0">
+                                <Label Content="Для добавления спортсмена заполните следующие данные:" Panel.ZIndex="1" FontSize="17"/>
+                                <Label Content="ФИО:" Panel.ZIndex="1" FontSize="17"></Label>
+                                <TextBox  x:Name="TxbFIO" Height="20" Width="250" Grid.Row="0" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Гражданство:" Panel.ZIndex="1" FontSize="17" Grid.Row="1"></Label>
+                                <TextBox  x:Name ="TxbCitizenship" Height="20" Width="250" Grid.Row="1" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Рост:" Panel.ZIndex="1" FontSize="17" Grid.Row="2"></Label>
+                                <TextBox  x:Name="TxbHeight" Height="20" Width="250" Grid.Row="2" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Вес:" Panel.ZIndex="1" FontSize="17" Grid.Row="3"></Label>
+                                <TextBox  x:Name="TxbWeight" Height="20" Width="250" Grid.Row="3" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Нога:" Panel.ZIndex="1" FontSize="17" Grid.Row="4"></Label>
+                                <TextBox  x:Name="TxbFoot" Height="20" Width="250" Grid.Row="4" HorizontalAlignment="Center"></TextBox>
+
+                                <Label Content="Возраст:" Panel.ZIndex="1" FontSize="17" Grid.Row="5"></Label>
+                                <TextBox  x:Name="Txb_Age" Height="20" Width="250" Grid.Row="5" HorizontalAlignment="Center"></TextBox>
+
+
+                                <Label Content="" Panel.ZIndex="1" FontSize="17"/>
+                                <Button Width="192" Content="Добавить спортсмена"  HorizontalAlignment="Center" FontSize="17" Click="BtnRegister_Click" Background="Purple" Grid.Row="7" Height="38" VerticalAlignment="Top"/>
+
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+
+
+
+
+        </TabControl>
+        <Button Height="24" Width="68" Content="Выйти" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,1,0,0" FontSize="17" Background="Purple" Foreground="White" Click="Click" Panel.ZIndex="2">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Page>
